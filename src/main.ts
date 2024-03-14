@@ -12,7 +12,6 @@ async function bootstrap() {
 
   setupSwagger(app);
 
-  app.setGlobalPrefix('api/v1');
   app.use(cookieParser());
 
   await app.listen(port);

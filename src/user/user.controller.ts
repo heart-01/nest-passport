@@ -15,7 +15,7 @@ import { User } from './schemas/user.schema';
 
 @ApiTags('User')
 @ApiBearerAuth('authorization')
-@Controller('user')
+@Controller('users')
 export class UserController {
   constructor(private readonly userService: UserService) {}
 
