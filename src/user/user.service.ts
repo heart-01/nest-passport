@@ -15,7 +15,7 @@ export class UserService {
     return newUser.save();
   }
 
-  async findByEmail(email: string): Promise<User> {
+  async findByEmail(email: string): Promise<any> {
     return this.userModel.findOne({ email }).exec();
   }
 }
