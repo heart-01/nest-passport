@@ -10,12 +10,12 @@ export class UserService {
     @InjectModel(User.name) private readonly userModel: Model<UserDocument>,
   ) {}
 
-  async create(registerDTO: RegisterDTO) {
+  async create(registerDTO: RegisterDTO): Promise<User> {
     const newUser = new this.userModel(registerDTO);
     return newUser.save();
   }
 
-  async findByEmail(email: string) {
+  async findByEmail(email: string): Promise<User> {
     return this.userModel.findOne({ email }).exec();
   }
 }
